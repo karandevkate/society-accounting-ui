@@ -1,0 +1,97 @@
+Card container .societyCard {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.societyCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Header with gradient */
+.societyHeader {
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    color: #fff;
+    padding: 12px 16px;
+    font-size: 1rem;
+}
+
+/* Body */
+.societyBody {
+    padding: 16px;
+    background: linear-gradient(180deg, #f9f9f9, #ffffff);
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.societyBody p {
+    margin-bottom: 8px;
+}
+
+/* Edit icon animation */
+.editIcon {
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.editIcon:hover {
+    transform: scale(1.2) rotate(15deg);
+    color: #fff;
+}
+
+.card-custom {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+}
+
+.card-custom:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-custom .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-custom h4 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.card-custom .card-content {
+    font-size: 1rem;
+    color: #f1f1f1;
+}
+
+.card-custom-1 {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+.card-custom-2 {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+.card-custom-3 {
+    background: linear-gradient(135deg, #ff8c00, #ffd700);
+}
+
+.card-custom-4 {
+    background: linear-gradient(135deg, #00bcd4, #8e24aa);
+}
+
+.dashboard-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}

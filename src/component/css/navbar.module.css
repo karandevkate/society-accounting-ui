@@ -1,0 +1,10 @@
+.Link {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    color: inherit;
+}
+
+.customTable {
+    min-height: 300px;
+    overflow-y: scroll;
+}

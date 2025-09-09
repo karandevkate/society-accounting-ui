@@ -1,0 +1,174 @@
+.pageWrapper {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+}
+
+.flipCard {
+    perspective: 1000px;
+}
+
+.flipCardInner {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.flipped .flipCardInner {
+    transform: rotateY(180deg);
+}
+
+.flipCardFront,
+.flipCardBack {
+    width: 100%;
+    min-height: 600px;
+    backface-visibility: hidden;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.flipCardBack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+}
+
+.cardTitle {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1a3c34;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #344054;
+}
+
+.input,
+.textarea {
+    padding: 0.5rem;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #1a3c34;
+    background: #f9fafb;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input:focus,
+.textarea:focus {
+    outline: none;
+    border-color: #1a3c34;
+    box-shadow: 0 0 0 3px rgba(26, 60, 52, 0.1);
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.primaryButton,
+.secondaryButton,
+.successButton {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.primaryButton {
+    background: #1a3c34;
+    color: #ffffff;
+}
+
+.primaryButton:hover {
+    background: #2a5a4e;
+    transform: translateY(-1px);
+}
+
+.secondaryButton {
+    background: #6c757d;
+    color: #ffffff;
+}
+
+.secondaryButton:hover {
+    background: #5c636a;
+    transform: translateY(-1px);
+}
+
+.successButton {
+    background: #28a745;
+    color: #ffffff;
+}
+
+.successButton:hover {
+    background: #218838;
+    transform: translateY(-1px);
+}
+
+.buttonGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.spinner {
+    margin-left: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .formRow {
+        grid-template-columns: 1fr;
+    }
+
+    .flipCardFront,
+    .flipCardBack {
+        padding: 1.5rem;
+    }
+}

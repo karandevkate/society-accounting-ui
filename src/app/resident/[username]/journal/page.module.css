@@ -1,0 +1,35 @@
+.container {
+  margin: 0 auto;
+  max-width: 1400px;
+  /* make the page wider */
+  width: 100%;
+}
+
+.headerSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.headerSection h2 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.card {
+  width: 100%;
+  max-width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.tableWrapper {
+  max-height: 600px;
+  overflow-y: auto;
+  overflow-x: auto;
+}

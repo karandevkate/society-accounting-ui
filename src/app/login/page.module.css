@@ -1,0 +1,451 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.container {
+    position: relative;
+    width: 70%;
+    max-width: 100%;
+    min-height: 500px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+}
+
+
+
+.formContainer {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 50%;
+    min-height: 100%;
+    height: auto !important;
+    overflow-y: visible;
+    transition: all 0.6s ease-in-out;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.signInContainer {
+
+    display: flex;
+    width: 40%;
+    z-index: 2;
+}
+
+.rightPanelActive .signInContainer {
+    transform: translateX(100%);
+}
+
+.signUpContainer {
+    left: -9%;
+    opacity: 0;
+    z-index: 1;
+    height: auto !important;
+    width: 55%;
+    min-height: 100%;
+    overflow-y: visible;
+}
+
+.rightPanelActive .signUpContainer {
+    transform: translateX(100%);
+    height: auto !important;
+    opacity: 1;
+    z-index: 5;
+    animation: show 0.6s;
+}
+
+.rightPanelActive .emailCard {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    height: 90%;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    /* ADD THIS */
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    /* optional, for better appearance */
+}
+
+
+@keyframes show {
+
+    0%,
+    49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.signupcard {
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.scrollContainer {
+    padding: 10px;
+    max-height: 300px;
+    width: 100%;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #ebeaea transparent;
+}
+
+
+
+.overlayContainer {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+}
+
+.rightPanelActive .overlayContainer {
+    transform: translateX(-100%);
+}
+
+.overlay {
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.rightPanelActive .overlay {
+    border-radius: 0 40% 40% 0;
+    transform: translateX(50%);
+}
+
+.overlayPanel {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 47%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlayLeft {
+    border-top-right-radius: 40%;
+    border-bottom-right-radius: 40%;
+    transform: translateX(-20%);
+}
+
+.rightPanelActive .overlayLeft {
+    transform: translateX(0);
+}
+
+.overlayRight {
+    right: 0;
+    border-top-left-radius: 40%;
+    border-bottom-left-radius: 40%;
+    transform: translateX(0);
+}
+
+.rightPanelActive .overlayRight {
+    transform: translateX(20%);
+}
+
+.card {
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.input {
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    background: #f0f2f5;
+    transition: all 0.3s ease;
+}
+
+.input:focus {
+    outline: none;
+    background: #fff;
+}
+
+.inputGroup {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background: #f9f9f9;
+    border-radius: 15px;
+    padding: 12px 12px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.titleIcon {
+    font-size: 1.5rem;
+    vertical-align: middle;
+    color: #6a11cb;
+}
+
+.inputGroup:focus-within {
+    border-color: #6a11cb;
+    box-shadow: 0 0 0 3px rgba(106, 17, 203, 0.2);
+    background: #fff;
+}
+
+.icon {
+    margin-right: 10px;
+    color: #6a11cb;
+    font-size: 1.2rem;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+    border: none;
+    outline: none;
+    background: transparent;
+    flex: 1;
+    font-size: 0.95rem;
+}
+
+.button {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    border: none;
+    border-radius: 20px;
+    padding: 10px 35px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 117, 252, 0.4);
+}
+
+.overlaybutton {
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    padding: 10px 35px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.overlaybutton:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.link {
+    color: #2575fc;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: #6a11cb;
+    text-decoration: underline;
+}
+
+.overlayText {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 15px 0;
+}
+
+.mobileToggle {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    border: none;
+    border-radius: 25px;
+    padding: 8px;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobileToggle:hover {
+    transform: translateX(-50%) translateY(-2px);
+    box-shadow: 0 6px 15px rgba(37, 117, 252, 0.4);
+}
+
+@media (max-width: 768px) {
+    .scrollContainer {
+        max-height: 250px;
+        overflow-y: auto;
+    }
+
+    .container {
+        width: 90%;
+        min-height: 450px;
+        position: relative;
+        padding-top: 60px;
+    }
+
+    .formContainer {
+        width: 100%;
+        padding: 15px;
+        position: static;
+        transform: none !important;
+    }
+
+    .signInContainer,
+    .signUpContainer {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .signInContainer {
+        opacity: 1;
+        z-index: 2;
+    }
+
+    .rightPanelActive .signInContainer {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .signUpContainer {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .rightPanelActive .signUpContainer {
+        opacity: 1;
+        z-index: 2;
+        padding-bottom: 10px;
+    }
+
+    .overlayContainer {
+        display: none;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 0.8rem;
+    }
+
+    .input {
+        padding: 8px 12px;
+    }
+
+    .button {
+        padding: 8px 25px;
+    }
+
+    .mobileToggle {
+        width: 80%;
+        top: 15%;
+        z-index: 1;
+        font-size: 0.85rem;
+
+    }
+}
+
+@media (max-width: 576px) {
+    .wrapper {
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        min-height: 400px;
+    }
+
+
+
+    .card {
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 1.3rem;
+    }
+
+    .input {
+        margin: 8px 0;
+    }
+
+    .button {
+        padding: 8px 20px;
+    }
+
+    .mobileToggle {
+        top: 15%;
+        width: 80%;
+        font-size: 0.85rem;
+    }
+}

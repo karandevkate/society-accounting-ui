@@ -1,0 +1,112 @@
+.headerSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.headerSection h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #343a40;
+}
+
+.card {
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.tableWrapper {
+    max-height: 400px;
+    /* Reduced from 500px in your previous code */
+    overflow-y: auto;
+    position: relative;
+    scrollbar-width: thin;
+}
+
+
+
+.tableWrapper {
+
+    scrollbar-color: #888 #f1f1f1;
+}
+
+.customTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.customTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.customTable th,
+.customTable td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.tableHead {
+    position: sticky;
+    top: 0;
+    background-color: #f8f9fa;
+    z-index: 1;
+}
+
+.tableWrapper::-webkit-scrollbar {
+    width: 8px;
+}
+
+.tableWrapper::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.tableWrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.tableHead th {
+    background-color: #e9ecef;
+    color: #495057;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border-bottom: 2px solid #dee2e6;
+}
+
+/* Table body styling */
+.customTable tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.customTable tbody tr:hover {
+    background-color: #f1f3f5;
+}
+
+/* Table cell borders */
+.customTable td {
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Last row border fix */
+.customTable tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Action icon styling */
+.customTable .actionIcon {
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.customTable .actionIcon:hover {
+    color: #0056b3;
+}

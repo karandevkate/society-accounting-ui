@@ -1,0 +1,24 @@
+.container {
+  padding: 1.5rem;
+  margin: 0 auto;
+}
+
+.headerSection {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.headerSection h2 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 1rem;
+  background-color: #fff;
+}

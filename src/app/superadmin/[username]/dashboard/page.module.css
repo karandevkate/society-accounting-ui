@@ -1,0 +1,45 @@
+.card-custom {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+    height: 200px;
+}
+
+.card-custom:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-custom .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white
+}
+
+.card-custom h4 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.card-custom .card-content {
+    font-size: 1rem;
+    color: #f1f1f1;
+}
+
+.card-custom-1 {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+.card-custom-2 {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+.card-custom-3 {
+    background: linear-gradient(135deg, #ff8c00, #ffd700);
+}
+
+.card-custom-4 {
+    background: linear-gradient(135deg, #00bcd4, #8e24aa);
+}
